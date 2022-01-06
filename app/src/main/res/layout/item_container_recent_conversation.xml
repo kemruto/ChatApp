@@ -10,10 +10,17 @@
         android:layout_height="@dimen/_35sdp"
         android:background="@drawable/background_image"
         android:scaleType="centerCrop"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:riv_oval="true"/>
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        app:layout_constraintBaseline_toBottomOf="@id/imageProfile"
+        app:layout_constraintStart_toEndOf="@id/imageProfile"
+        app:layout_constraintTop_toTopOf="@id/imageProfile"/>
 
     <TextView
         android:id="@+id/textName"
@@ -27,11 +34,11 @@
         android:textColor="@color/primary_text"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageProfile"
+        app:layout_constraintBottom_toTopOf="@id/viewSupporter"
         app:layout_constraintStart_toEndOf="@id/imageProfile"/>
 
     <TextView
-        android:id="@+id/textEmail"
+        android:id="@+id/textRecentMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
@@ -39,9 +46,9 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textColor="@color/primary_text"
-        android:textSize="@dimen/_10sdp"
+        android:textSize="@dimen/_12ssp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageProfile"
-        app:layout_constraintTop_toBottomOf="@id/textName"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
